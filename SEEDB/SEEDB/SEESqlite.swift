@@ -19,8 +19,7 @@ class SEESqlite: NSObject {
     }
     
     class func test(objc: AnyObject) {
-        let dict: [String: Any] = SEESqlite.manager.dictionary(withObj: objc)
-        print(dict)
+        SEESqlite.insert(withObjs: objc, toTable: "abc")
     }
     
     ///insert object to table 
@@ -50,8 +49,20 @@ class SEESqlite: NSObject {
     }
     
     private func insert(_ obj: AnyObject,toTable table: String) -> Int {
-        
-        return 1
+        let propertys = array(withCla: type(of: obj))
+        var say: String = "insert or replace into '\(table)'("
+        var say2: String = " values("
+        for (index,propertyName) in propertys.enumerated() {
+            if index == propertys.count - 1 {
+                say.append("\(propertyName))")
+                say2.append("'\((obj.value(forKey: propertyName))!)');")
+                say = say + say2
+                break
+            }
+            say.append("\(propertyName),")
+            say2.append("'\((obj.value(forKey: propertyName))!)',")
+        }
+        return Int(sqlite3_exec(db!, say, nil, nil, nil))
     }
     
     ///create table 

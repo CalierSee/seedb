@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SEEDB/ViewController.swift"
-            timestampString = "503157069.279481"
+            timestampString = "503196042.17206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SEEDB/SEESqlite.swift"
-            timestampString = "503161465.610577"
+            timestampString = "503196922.707187"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "insert(_:toTable:)"
             landmarkType = "7">
          </BreakpointContent>

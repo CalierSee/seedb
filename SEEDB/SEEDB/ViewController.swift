@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         person1.age = 18
         person1.gander = false
         SEESqlite.test(objc: person1)
+        
     }
 
     //MARK: - swift
