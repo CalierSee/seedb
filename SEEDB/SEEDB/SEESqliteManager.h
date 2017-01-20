@@ -27,7 +27,7 @@
  @param where 条件语句  为空查询全部
  @return 模型数组
  */
-- (null_unspecified id)objectForClass:(nonnull Class)cla fromTable:(nonnull NSString *)table where:(NSString * _Nullable)where completeBlock:(nullable void(^)())complete;
+- (nullable NSArray *)objectForClass:(nonnull Class)cla fromTable:(nonnull NSString *)table where:(NSString * _Nullable)where completeBlock:(nullable void(^)())complete;
 
 /**
  删除模型对应的数据

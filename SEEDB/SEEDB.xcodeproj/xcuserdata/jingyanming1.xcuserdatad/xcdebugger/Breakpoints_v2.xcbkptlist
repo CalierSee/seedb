@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SEEDB/ViewController.swift"
-            timestampString = "503196042.17206"
+            filePath = "SEEDB/SEESqlite.swift"
+            timestampString = "506585681.261719"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "delete(_:fromTable:idField:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SEEDB/SEESqlite.swift"
-            timestampString = "503196922.707187"
+            timestampString = "506585534.204777"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "insert(_:toTable:)"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "delete(_:fromTable:idField:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -20,7 +20,8 @@ class ViewController: UIViewController {
         person1.name = "张三"
         person1.age = 18
         person1.gander = false
-        SEESqlite.test(objc: person1)
+        let arr: [Person] = [person1]
+        SEESqlite.test(objc: arr)
         
     }
 

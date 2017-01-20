@@ -95,7 +95,7 @@
     return sqlite3_exec(_sql, say.UTF8String, NULL, NULL, NULL);
 }
 
-- (null_unspecified id)objectForClass:(nonnull Class)cla fromTable:(nonnull NSString *)table where:(NSString * _Nullable)where completeBlock:(nullable void (^)())complete{
+- (nullable NSArray *)objectForClass:(nonnull Class)cla fromTable:(nonnull NSString *)table where:(NSString * _Nullable)where completeBlock:(nullable void (^)())complete{
     //拼接sql语句
     NSMutableString * say = [NSMutableString string];
     NSMutableString * whereStr = [NSMutableString string];
@@ -108,6 +108,9 @@
     [say appendString:whereStr];
     //创建对象数组接收对象
     NSArray * dictArr = [self dictionaryFromSql:say.copy];
+    if (dictArr.count == 0) {
+        return nil;
+    }
     NSMutableArray * objcArr = [NSMutableArray array];
     [dictArr enumerateObjectsUsingBlock:^(NSDictionary * obj, NSUInteger idx, BOOL * _Nonnull stop) {
         id objc = [[cla alloc]init];
@@ -119,7 +122,7 @@
             complete();
         });
     }
-    return objcArr;
+    return objcArr.copy;
 }
 
 - (NSArray <NSDictionary *> *)dictionaryFromSql:(NSString * _Nullable)sql {
